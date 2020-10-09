@@ -53,6 +53,7 @@ def main():
     root = tk.Tk(className=f'{appname.lower()}-{sys.argv[1]}')
 
     print(f'Initial tk scaling: {root.tk.call("tk", "scaling")}')
+    print(f'Scale percentage is {sys.argv[1]}')
     root.tk.call('tk', 'scaling', root.tk.call("tk", "scaling") * float(int(sys.argv[1]) / 100.0))
     print(f'tk scaling now: {root.tk.call("tk", "scaling")}')
 
